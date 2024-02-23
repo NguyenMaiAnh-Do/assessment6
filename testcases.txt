@@ -1,0 +1,25 @@
+I. Testcase 1:
+
+This test will verify that we can choose two bots from the UI
+
+Steps:
+1. Navigate through the frontend
+2. Click on draw
+3. Choose two bots and click "Add to Duo"
+4. Click "Duel"
+
+Test Postconditions:
+1. The scores of human and laptop will be displayed
+2. The wins and losses scores also correctly calculated and displayed
+
+II. Testcase 2:
+
+This test will verify that we can see all types of bots
+
+Steps:
+1. Navigate through the front page
+2. Click on "See All Bots" button
+
+Test Postconditions:
+1. All types of bots will be displayed
+

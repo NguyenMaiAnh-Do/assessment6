@@ -1,0 +1,22 @@
+1. Overview:
+Test the functionality of the app
+
+2. Test Criteria:
+- Make sure bots information, buttons and scores are provisioned in the app
+- Make sure the buttons provide proper functions
+- Scores are calculated correctly
+- Reset button will reset the game
+
+3. Entry Criteria:
+- Test critera provided
+- Running version for testing
+- Computer for testing
+
+4. Exit Criteria:
+- All high priority tests have passed
+- The allotted time is up
+
+5. Other details:
+- Environment
+- Should run on any modern brower and be fully functional
+- Chrom is the recommended brower

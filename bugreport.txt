@@ -1,0 +1,19 @@
+ID Number Bug Report
+
+Description:
+
+The "See All Bots" button does not work.
+
+Steps to reproduce:
+    1. Navigate through the project frontpage
+    2. Click on "see All Bots" button
+
+Expected result:
+    We will see all types of Bots
+
+Actual result:
+    The page stay the same
+
+Environment: 
+    Chrom version 89
+    Mac Os
