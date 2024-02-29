@@ -2,6 +2,18 @@ const express = require("express");
 const bots = require("./src/botsData");
 const shuffle = require("./src/shuffle");
 
+
+// include and initialize the rollbar library with your access token
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: '*****************',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
+// record a generic message and send it to Rollbar
+rollbar.log('Hello world!')
+
 const playerRecord = {
   wins: 0,
   losses: 0,
@@ -36,6 +48,7 @@ const calculateHealthAfterAttack = ({ playerDuo, compDuo }) => {
 };
 
 app.get("/api/robots", (req, res) => {
+  rollbar.info('GET reuqest to /api/robots');
   try {
     res.status(200).send(botsArr);
   } catch (error) {
@@ -45,6 +58,8 @@ app.get("/api/robots", (req, res) => {
 });
 
 app.get("/api/robots/shuffled", (req, res) => {
+  rollbar.info('GET reuqest to /api/robots/shuffled');
+
   try {
     let shuffled = shuffle(bots);
     res.status(200).send(shuffled);
@@ -55,6 +70,7 @@ app.get("/api/robots/shuffled", (req, res) => {
 });
 
 app.post("/api/duel", (req, res) => {
+  rollbar.info('POST reuqest to /api/duel');
   try {
     const { compDuo, playerDuo } = req.body;
 
@@ -78,6 +94,7 @@ app.post("/api/duel", (req, res) => {
 });
 
 app.get("/api/player", (req, res) => {
+  rollbar.info('GET reuqet to /api/player');
   try {
     res.status(200).send(playerRecord);
   } catch (error) {
